@@ -33,3 +33,5 @@ fire ball (green)
 
 # Time Details and Changelist
 <Add information to this section about the time you've taken for this task along with a professional changelist.>
+0:09 - Fixed circular dependency error preventing game from starting
+0:31 - Added a simple trail to follow the ball around the screen
