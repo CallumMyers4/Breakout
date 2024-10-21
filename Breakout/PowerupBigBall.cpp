@@ -10,7 +10,7 @@ PowerupBigBall::~PowerupBigBall()
 {
 }
 
-std::pair<POWERUPS, float> PowerupBigPaddle::applyEffect()
+std::pair<POWERUPS, float> PowerupBigBall::applyEffect()
 {
     _ball->setRadius(15.f, 5.f);
     return { bigBall, 5.0f };
