@@ -8,6 +8,9 @@ Ball::Ball(sf::RenderWindow* window, float velocity, GameManager* gameManager)
     _sprite.setRadius(RADIUS);
     _sprite.setFillColor(sf::Color::Cyan);
     _sprite.setPosition(0, 300);
+
+    _soundBuffer.loadFromFile("audio/paddleSound.wav");  //load sound into buffer
+    _paddleSound.setBuffer(_soundBuffer);   //set paddleSound variable correctly
 }
 
 Ball::~Ball()
@@ -85,6 +88,8 @@ void Ball::update(float dt)
 
         // Adjust position to avoid getting stuck inside the paddle
         _sprite.setPosition(_sprite.getPosition().x, _gameManager->getPaddle()->getBounds().top - 2 * RADIUS);
+
+        _paddleSound.play();    //play audio
     }
 
     // collision with bricks

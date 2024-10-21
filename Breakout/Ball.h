@@ -1,5 +1,6 @@
 #pragma once
 #include <SFML/Graphics.hpp>
+#include <SFML/Audio.hpp>
 
 
 class GameManager;  // forward declaration
@@ -20,6 +21,8 @@ private:
     sf::CircleShape _trailSprite;   //sprite to be drawn in the trail
     sf::Vector2f _direction;
     sf::RenderWindow* _window;
+    sf::SoundBuffer _soundBuffer;   //buffer for loading sounds
+    sf::Sound _paddleSound;     //audio for ball hitting paddle
     float _velocity;
     bool _isAlive;
     bool _isFireBall;
