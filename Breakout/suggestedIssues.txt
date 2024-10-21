@@ -17,5 +17,3 @@ IMPROVEMENTS:
 * Implement box2D and improve the physics handling.
 
 * Powerup that makes bricks explode, destroying neighbours.
-
-
