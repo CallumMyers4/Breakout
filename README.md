@@ -37,5 +37,10 @@ fire ball (green)
 0:31 - Added a simple trail to follow the ball around the screen
 0:58 - Added audio
 1:36 - Added a new powerup, has a bug when hitting the paddle
+1:43 - Parameterised the function which spawns a powerup
+2:12 - Added screen shake when player loses life
+
+
 https://www.sfml-dev.org/tutorials/2.6/audio-sounds.php
 https://pixabay.com/sound-effects/search/retro%20games/
+https://en.sfml-dev.org/forums/index.php?topic=27891.0
