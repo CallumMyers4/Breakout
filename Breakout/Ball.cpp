@@ -9,8 +9,11 @@ Ball::Ball(sf::RenderWindow* window, float velocity, GameManager* gameManager)
     _sprite.setFillColor(sf::Color::Cyan);
     _sprite.setPosition(0, 300);
 
-    _soundBuffer.loadFromFile("audio/paddleSound.wav");  //load sound into buffer
-    _paddleSound.setBuffer(_soundBuffer);   //set paddleSound variable correctly
+    _paddleSoundBuffer.loadFromFile("audio/paddleSound.wav");  //load sound into buffer
+    _paddleSound.setBuffer(_paddleSoundBuffer);   //set paddleSound variable correctly
+
+    _blockSoundBuffer.loadFromFile("audio/blockSound.wav");  //load sound into buffer
+    _blockSound.setBuffer(_blockSoundBuffer);   //set paddleSound variable correctly
 }
 
 Ball::~Ball()
@@ -94,14 +97,20 @@ void Ball::update(float dt)
 
     // collision with bricks
     int collisionResponse = _gameManager->getBrickManager()->checkCollision(_sprite, _direction);
-    if (_isFireBall) return; // no collisisons when in fireBall mode.
+    if (_isFireBall)
+    {
+        _blockSound.play();
+        return; // no collisisons when in fireBall mode.
+    }
     if (collisionResponse == 1)
     {
         _direction.x *= -1; // Bounce horizontally
+        _blockSound.play();
     }
     else if (collisionResponse == 2)
     {
         _direction.y *= -1; // Bounce vertically
+        _blockSound.play();
     }
 }
 

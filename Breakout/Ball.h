@@ -21,8 +21,10 @@ private:
     sf::CircleShape _trailSprite;   //sprite to be drawn in the trail
     sf::Vector2f _direction;
     sf::RenderWindow* _window;
-    sf::SoundBuffer _soundBuffer;   //buffer for loading sounds
+    sf::SoundBuffer _paddleSoundBuffer;   //buffer for loading paddle sound
+    sf::SoundBuffer _blockSoundBuffer;   //buffer for loading block sound
     sf::Sound _paddleSound;     //audio for ball hitting paddle
+    sf::Sound _blockSound;     //audio for ball hitting blocks
     float _velocity;
     bool _isAlive;
     bool _isFireBall;
