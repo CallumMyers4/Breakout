@@ -16,6 +16,14 @@ Ball::~Ball()
 
 void Ball::update(float dt)
 {
+    _previousPositions.push_back(_sprite.getPosition());    //adds the current position to the vector
+
+    //if the number of points in the trail has gone above the maximum then remove the oldest point in the trail
+    if (_previousPositions.size() > _numberOfTrails)
+    {
+        _previousPositions.erase(_previousPositions.begin());
+    }
+
     // check for powerup, tick down or correct
     if (_timeWithPowerupEffect > 0.f)
     {
@@ -94,6 +102,18 @@ void Ball::update(float dt)
 
 void Ball::render()
 {
+    for (int i = 0; i < _previousPositions.size(); i++) //run through every position in the vector
+    {
+        //create a circle and set it to a semi-transparent green colour
+        _trailSprite.setRadius(RADIUS); 
+        _trailSprite.setFillColor(sf::Color(0.f, 255.f, 0.f, 2.f));
+
+        //set the position to the current position in the vector
+        _trailSprite.setPosition(_previousPositions[i]);
+
+        _window->draw(_trailSprite);//draw the sprite
+    }
+
     _window->draw(_sprite);
 }
 
