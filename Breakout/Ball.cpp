@@ -160,6 +160,7 @@ void Ball::setFireBall(float duration)
 
 void Ball::setRadius(float rad, float duration)
 {
-    _sprite.setRadius(rad);
+    float newRadius = rad * RADIUS;
+    _sprite.setRadius(newRadius);
     _timeInNewSize = duration;
 }

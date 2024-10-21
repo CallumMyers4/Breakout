@@ -36,6 +36,6 @@ fire ball (green)
 0:09 - Fixed circular dependency error preventing game from starting
 0:31 - Added a simple trail to follow the ball around the screen
 0:58 - Added audio
-
+1:36 - Added a new powerup, has a bug when hitting the paddle
 https://www.sfml-dev.org/tutorials/2.6/audio-sounds.php
 https://pixabay.com/sound-effects/search/retro%20games/

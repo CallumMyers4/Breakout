@@ -32,7 +32,7 @@ private:
     float _timeWithPowerupEffect;
     std::vector<sf::Vector2f> _previousPositions;   //a vector to store where the ball has come from to create a trail
     int _numberOfTrails = 200;   //how long the trail should be/how many previous points it should display
-    float _timeInNewSize;
+    float _timeInNewSize = 0;
         
     GameManager* _gameManager;  // Reference to the GameManager
 

@@ -32,6 +32,7 @@ private:
     float _pauseHold;
     float _time;
     float _timeLastPowerupSpawned;
+    int _powerupChance = 700;   //the chance of a powerup spawning every time the other conditions are met
     int _lives;
     bool _levelComplete, _sounds = true;
     std::pair<POWERUPS, float> _powerupInEffect;
