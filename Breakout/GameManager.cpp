@@ -45,6 +45,7 @@ void GameManager::update(float dt)
         _masterText.setString("Level completed.");
         return;
     }
+
     // pause and pause handling
     if (_pauseHold > 0.f) _pauseHold -= dt;
     if (sf::Keyboard::isKeyPressed(sf::Keyboard::P))
@@ -52,9 +53,10 @@ void GameManager::update(float dt)
         if (!_pause && _pauseHold <= 0.f)
         {
             _pause = true;
-            _masterText.setString("paused.");
+            _masterText.setString("Press P to return to game");
             _pauseHold = PAUSE_TIME_BUFFER;
         }
+
         if (_pause && _pauseHold <= 0.f)
         {
             _pause = false;

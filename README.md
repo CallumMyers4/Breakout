@@ -35,3 +35,7 @@ fire ball (green)
 <Add information to this section about the time you've taken for this task along with a professional changelist.>
 0:09 - Fixed circular dependency error preventing game from starting
 0:31 - Added a simple trail to follow the ball around the screen
+0:58 - Added audio
+
+https://www.sfml-dev.org/tutorials/2.6/audio-sounds.php
+https://pixabay.com/sound-effects/search/retro%20games/

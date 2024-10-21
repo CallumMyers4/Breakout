@@ -33,7 +33,7 @@ private:
     float _time;
     float _timeLastPowerupSpawned;
     int _lives;
-    bool _levelComplete;
+    bool _levelComplete, _sounds = true;
     std::pair<POWERUPS, float> _powerupInEffect;
 
     sf::Font _font;

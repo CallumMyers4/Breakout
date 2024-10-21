@@ -22,6 +22,15 @@ Ball::~Ball()
 
 void Ball::update(float dt)
 {
+    if (_timeInNewSize > 0)
+    {
+        _timeInNewSize -= dt;
+    }
+    else
+    {
+        _sprite.setRadius(RADIUS); // Reset to default width after duration
+    }
+
     _previousPositions.push_back(_sprite.getPosition());    //adds the current position to the vector
 
     //if the number of points in the trail has gone above the maximum then remove the oldest point in the trail
@@ -147,4 +156,10 @@ void Ball::setFireBall(float duration)
     }
     _isFireBall = false;
     _timeWithPowerupEffect = 0.f;    
+}
+
+void Ball::setRadius(float rad, float duration)
+{
+    _sprite.setRadius(rad);
+    _timeInNewSize = duration;
 }
