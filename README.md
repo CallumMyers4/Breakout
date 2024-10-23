@@ -3,12 +3,10 @@
 W Kavanagh. June Summer 2024
 
 ## controls
-
 A/D to move the paddle right and left.
 P to pause.
 
 ## Powerups
-
 big/small paddle (blue)
 fast/slow ball (fancy yellow)
 fire ball (green)
@@ -16,11 +14,9 @@ fire ball (green)
 # Tasklist
 
 ## Suggested fixes
-
 * Fix the compiler issues in the code
 
 ## Suggested tasks
-
 * Implement mouse input for pad
 * Improved VFX (ball trail, paddle hit response, brick particle destruction)
 * Better UI (progress bar rather than timer for countdown).
@@ -33,15 +29,20 @@ fire ball (green)
 
 # Time Details and Changelist
 <Add information to this section about the time you've taken for this task along with a professional changelist.>
-0:10 - Fixed circular dependency error preventing game from starting
-0:30 - Added a simple trail to follow the ball around the screen
-1:00 - Added audio
-1:35 - Added a new powerup, has a bug when hitting the paddle
-1:45 - Parameterised the function which spawns a powerup
-2:15 - Added screen shake when player loses life (forgot to commit here, in the same commit as game restart)
-2:20 - Added the ability to restart the game as required
-3:00 - Added the progress bar for the powerups
+- Spent 10 minutes familiariasing myself with the codebase
+- Spent 10 minutes fixing a circular dependency error which was preventing the game from starting
+- Spent 20 minutes adding a trail behind the ball
+- Spent 45 minutes adding audio when the ball hits the paddle or bricks
+- Spent 30 minutes attempting to add a powerup which made the ball bigger
+    - I removed this in a later commit because I couldn't work out how to change the hitbox
+      so it would interact with the paddle correctly
+- Spent 10 minutes updating the powerup spawning function to use parameters instead of harcoded numbers
+- Spent 45 minutes adding screen shake when the player loses a life
+- Spent 1 hour adding a progress bar which countsdown how long the powerup has left then fixed a bug
+    which caused the broken big ball powerup to still spawning
+Total time spent: 3.5 to 4 hours
 
+# Sources
 https://www.sfml-dev.org/tutorials/2.6/audio-sounds.php
 https://pixabay.com/sound-effects/search/retro%20games/
 https://en.sfml-dev.org/forums/index.php?topic=27891.0
